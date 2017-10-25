@@ -1,0 +1,119 @@
+body {
+    opacity: 0;
+}
+html {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+}
+body {
+    background: url("../img/png/Cloud-Background.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+    font-size: 1em;
+}
+.opContainer,
+.levelsContainer {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 2em;
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(26, 35, 5, 0.8);
+}
+.levelsContainer {
+    display: none;
+}
+.op {
+    vertical-align: top;
+    min-height: 90%;
+    max-height: 90%;
+    overflow: auto;
+    width: 23%;
+    margin: 1%;
+    border-radius: .5em;
+    display: inline-block;
+    background: rgba(237, 204, 54, .95);
+    border: .2em solid #9b730e;
+    background: rgba(214, 168, 18, .95);
+    border: .2em solid #6b5a21;
+}
+.op1 {} .op2 {} .op3 {} .levels {
+    min-height: 40%;
+    background: rgba(0, 0, 0, .5);
+    width: 30%;
+    margin: 1%;
+    border-radius: .5em;
+    border: .2em solid #fff;
+    display: inline-block;
+    padding: .5em;
+    vertical-align: top;
+}
+.levels:hover {
+    cursor: pointer;
+}
+.txtAlignCenter {
+    text-align: center;
+}
+.img-thumbnail {
+    background: none;
+    border: 0;
+}
+.selected {
+    background: rgba(237, 204, 54, .95);
+    border: .2em solid #9b730e;
+}
+.level-item:hover {
+    cursor: pointer;
+}
+.btn-back {
+    position: absolute;
+    top: .2em;
+    left: .2em;
+    z-index: 999999;
+    width: 6.2em;
+}
+.level0 {
+    border: solid .2em #176497;
+    background: #0b8be1;
+    background: rgba(11, 139, 225, .9);
+}
+.level1 {
+    border: solid .2em #07793a;
+    background: #1aaf5d;
+    background: rgba(84, 214, 84, .9);
+}
+.level2 {
+    border: solid .2em #992c1d;
+    background: #c33825;
+    background: rgba(195, 56, 37, .9);
+}
+.instructionContainer {
+    background: rgba(0, 0, 0, .8);
+    border-radius: .5em;
+    padding: .5em;
+    overflow: auto;
+    max-height: 45%;
+    background: rgba(0, 0, 0, .83);
+}
+p {
+    font-size: .6em;
+}
+@media(min-width:1200px) {
+    p {
+        font-size: 1em;
+    }
+    .levels {
+        padding: 1.5em;
+    }
+    .imgCustom {
+        width: 15px;
+        height: 15px;
+    }
+}

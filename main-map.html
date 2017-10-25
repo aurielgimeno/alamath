@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Alamath - Arithmetic Game</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/style-custom.css">
+	<link rel="stylesheet" href="css/main-map.css">
+
+	
+</head>
+
+<body>
+	<!-- AUDIO =================================================================================================================================================================================================== 	-->
+		<audio controls autoplay loop  style="display:none;" ><source src="audio/1.mp3" type="audio/mp3"></audio>	
+	<!-- END AUDIO =================================================================================================================================================================================================== -->
+		
+	<div class="darkBg"></div>
+	<div id="wrapper" >
+		<img src="img/png/btn-to-left.png" alt="" style="position:absolute;top:0;left:0;z-index:999999" class="btn btn-back-to-main-menu" />
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+				<center style="color:#fff">
+				<h2>Adventure Map</h2>
+				<h3>Select Kingdom</h3>
+				</center>
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 btnAnimate noPadding">
+					<img src="img/png/level-addition.png" alt="" id="levelAddition" class="levelSelect img-thumbnail noBG borderless " />
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 btnAnimate noPadding">
+					<img src="img/png/level-subtraction.png" alt="" id="levelSubtraction" class="levelSelect img-thumbnail noBG borderless " />
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 btnAnimate noPadding">
+					<img src="img/png/level-multiplication.png" alt="" id="levelMultiplication" class="levelSelect img-thumbnail noBG borderless " />
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 btnAnimate noPadding">
+					<img src="img/png/level-division.png" alt="" id="levelDivision" class="levelSelect img-thumbnail noBG borderless " />
+				</div>
+			</div>
+		</div>
+    </div><!-- /#wrapper -->
+	
+   
+	<div class="instructionsWrapper col-lg-12 col-md-12 col-sm-12 col-xs-12" style="">
+			
+		<!--instruction ADDITION START-->
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 instructionContainer instructionAddition">
+		<!--<img src="img/png/btn-x.png" alt="" class="btn_close" style="z-index:999999999"/>-->
+		
+			<p><b>Addition Kingdom: </b> Lets protect the Addition Kingdom by solving addition problems.</p>
+			<!--
+			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+				<img src="img/png/instructions/instruction-addition.png" alt="" class="img-thumbnail noBG borderless col-lg-12 col-md-12 col-sm-12 col-xs-12"/>
+			</div>-->
+			
+			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+				<img src="img/png/instructions/instruction-addition.png" alt="" class="img-thumbnail noBG borderless col-lg-12 col-md-12 col-sm-12 col-xs-12"/>
+			</div>
+			
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<h4>Instruction:</h4>
+				<p>Find the sum and Complete the number sentence</p>
+			
+				<button id="0" class="startGame btn btn-default col-lg-12 col-md-12 col-sm-12 col-xs-12" style="float:right">
+					Start Game
+				</button>
+			</div>
+			
+		</div><!--instruction ADDITION END-->
+		
+		<!--instruction subtraction START-->
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 instructionContainer instructionSubtraction">
+		<!--<img src="img/png/btn-x.png" alt="" class="btn_close" style="z-index:999999999"/>-->
+			
+			<p><b>Subtraction Kingdom: </b>Lets protect the Subtraction Kingdom by solving subtraction problems.</p>
+			
+			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+				<img src="img/png/instructions/instruction-subtraction.png" alt="" class="img-thumbnail noBG borderless col-lg-12 col-md-12 col-sm-12 col-xs-12"/>
+			</div>
+			
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<h4>Instruction:</h4>
+				<p>Find the difference and Complete the number sentence</p>
+			
+				<button id="1" class="startGame btn btn-default col-lg-12 col-md-12 col-sm-12 col-xs-12" style="float:right">
+					Start Game
+				</button>
+			</div>
+			
+		</div><!--instruction subtraction END-->
+		
+		
+		<!--instruction multiplication START-->
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 instructionContainer instructionMultiplication">
+		<!--<img src="img/png/btn-x.png" alt="" class="btn_close" style="z-index:999999999"/>-->
+			
+			<p><b>Multiplication Kingdom: </b>Lets protect the Multiplication Kingdom by solving Multiplication problems.</p>
+			
+			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+				<img src="img/png/instructions/instruction-multiplication.png" alt="" class="img-thumbnail noBG borderless col-lg-12 col-md-12 col-sm-12 col-xs-12"/>
+			</div>
+			
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<h4>Instruction:</h4>
+				<p>Find the product and Complete the number sentence</p>
+			
+				<button  id="2" class="startGame btn btn-default col-lg-12 col-md-12 col-sm-12 col-xs-12" style="float:right">
+					Start Game
+				</button>
+			</div>
+			
+		</div><!--instruction multiplication END-->
+		
+		<!--instruction Division START-->
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 instructionContainer instructionDivision">
+		<!--<img src="img/png/btn-x.png" alt="" class="btn_close" style="z-index:999999999"/>-->
+			
+			<p><b>Division Kingdom: </b>Lets protect the Division Kingdom by solving Division problems.</p>
+			
+			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+				<img src="img/png/instructions/instruction-division.png" alt="" class="img-thumbnail noBG borderless col-lg-12 col-md-12 col-sm-12 col-xs-12"/>
+			</div>
+			
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<h4>Instruction:</h4>
+				<p>Find the Quotient and Complete the number sentence</p>
+			
+				<button  id="3" class="startGame btn btn-default col-lg-12 col-md-12 col-sm-12 col-xs-12" style="float:right">
+					Start Game
+				</button>
+			</div>
+			
+		</div><!--instruction multiplication END-->
+	</div>
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jq-custom-animations.js"></script>
+	<script src="js/jquery.transit.js"></script>
+	<script src="js/main-map.js"></script>
+
+</body>
+
+</html>

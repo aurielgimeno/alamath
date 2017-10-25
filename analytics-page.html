@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>Alamath - Arithmetic Game</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/style-custom.css">
+	<link rel="stylesheet" href="css/analytics-page.css">
+</head>
+<body>
+	<!-- AUDIO =================================================================================================================================================================================================== -->
+	<audio controls autoplay loop  style="display:none;" ><source src="audio/1.mp3" type="audio/mp3"></audio>	
+	<!-- END AUDIO =================================================================================================================================================================================================== -->
+
+	<!--main cointainer START -->
+	<div class="mainCointainer col-lg-10 col-md-10 col-sm-10 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+		<img src="img/png/btn-x.png" alt="" class="btn_close btn-back-to-main-menu btn" />
+			<center><h4 class="title">Player's Status</h4></center>
+			<ul id="myTab1"  class="nav nav-tabs">
+				<li class="active" >
+					<a href="#progressTab" data-toggle="tab" id="btnProgressTab">
+					Scores Progress
+					</a>
+				</li>
+				<li>
+					<a href="#strengthsTab" data-toggle="tab" id="btnStrengthsTab" >
+					Strengths
+					</a>
+				</li>
+				<li>
+					<a href="#thingsToImproveTab" data-toggle="tab" id="btnThingsToImprove" >
+					Things to Improve
+					</a>
+				</li>
+			</ul>
+			
+			<div id="myTabContent1" class="tab-content">
+			   <div class="tab-pane fade in active" id="progressTab">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div style="width:100% margin:0 auto;overflow:visible" >
+						<!-- 2nd tab menu START -->
+						<ul id="myTab2"  class="nav nav-tabs">
+							<li class="" >
+								<a href="#progressTab" data-toggle="tab" class="btnProgressAddtion btnBarChart">
+								+
+								</a>
+							</li>
+							<li>
+								<a href="#progressTab" data-toggle="tab" class="btnProgressSubstraction btnBarChart">
+								-
+								</a>
+							</li>
+							<li>
+								<a href="#progressTab" data-toggle="tab" class="btnProgressMultiplication btnBarChart">
+								X
+								</a>
+							</li>
+							<li>
+								<a href="#progressTab" data-toggle="tab" class="btnProgressDivision btnBarChart">
+								%
+								</a>
+							</li>
+							<!--
+							<li>
+								<a href="#progressTab" data-toggle="tab" class="btnProgressAll">
+								All
+								</a>
+							</li>
+							-->
+						</ul>
+						<!-- 2nd tab menu END -->
+						
+						<div id="myTabContent2" class="tab-content">
+							<div class="tab-pane fade in active" id="progressTab">
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"  style="border:thin solid #2e450a;margin:.2em;overflow:auto;background:#39550c;">
+									<p>Scores in <span class="txtSubject">Addition</span></p>
+									<p class="txtBarError">asd</p>
+									<canvas id="canvasBarChart" height="300" width="1000" style="margin-left:-10px;"></canvas>
+								</div>
+							</div>
+							
+						</div>
+					
+					</div>
+				</div>
+			   </div>
+					   
+			   <div class="tab-pane fade" id="strengthsTab">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						
+						<center>
+						<div id="canvas-holder" style="margin:1em;background:#39550c;padding:.5em">
+							<center><h4>Your Strengths</h4>
+							<h2><span class="txtNoStrengths"></span></h2></center>
+							<canvas id="chart-area-strengths" width="150" height="150"/>
+						</div>
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<!--addition START-->
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background:#39550c;padding:.5em">
+								
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background:#F7464A;min-height:1em;border:thin solid #cc2c30">Addition</div>
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="border-top:thin solid #1a2305;"></div>
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Points: <span class="txtLocalCorrectAnswerAddition"></span></div>
+								
+								
+								
+							</div><!--addition END-->
+							
+							<!--substraction START-->
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background:#39550c;padding:.5em">
+								
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background:#2d7dec;min-height:1em;border:thin solid #49a5c0">Substraction</div>
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="border-top:thin solid #1a2305;"></div>
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Points: <span class="txtLocalCorrectAnswerSubtraction"></span></div>
+								
+								
+								
+							</div><!--substraction END-->
+							
+							<!--multiplication START-->
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background:#39550c;padding:.5em">
+								
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background:#358435;min-height:1em;border:thin solid #358435">Multiplication</div>
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="border-top:thin solid #1a2305;"></div>
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Points: <span class="txtLocalCorrectAnswerMultiplication"></span></div>
+								
+								
+								
+							</div><!--multiplication END-->
+							<!--Division START-->
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background:#39550c;padding:.5em">
+								
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background:#e38c12;min-height:1em;border:thin solid #f6a531">Division</div>
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="border-top:thin solid #1a2305;"></div>
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Points: <span class="txtLocalCorrectAnswerDivision"></span></div>
+								
+								
+								
+							</div><!--Division END-->
+							
+							
+						</div>
+						</center>
+					</div>
+				</div>
+				
+			   <div class="tab-pane fade" id="thingsToImproveTab">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						
+						<div id="canvas-holder" style="margin:1em;background:#39550c;padding:.5em">
+							<center><h4>Things to Improve</h4>
+							<h2><span class="txtNoThingsToImprove"></span></h2></center>
+							<center><canvas id="chart-area-things-to-improve" width="150" height="150"/></center>
+						</div>
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<!--addition START-->
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background:#39550c;padding:.5em">
+								
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background:#F7464A;min-height:1em;border:thin solid #cc2c30">Addition</div>
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="border-top:thin solid #1a2305;"></div>
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Points: <span class="txtLocalWrongAnswerAddition"></span></div>
+								
+								
+								
+							</div><!--addition END-->
+							
+							<!--substraction START-->
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background:#39550c;padding:.5em">
+								
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background:#2d7dec;min-height:1em;border:thin solid #49a5c0">Substraction</div>
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="border-top:thin solid #1a2305;"></div>
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Points: <span class="txtLocalWrongAnswerSubtraction"></span></div>
+								
+								
+								
+							</div><!--substraction END-->
+							
+							<!--multiplication START-->
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background:#39550c;padding:.5em">
+								
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background:#358435;min-height:1em;border:thin solid #358435">Multiplication</div>
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="border-top:thin solid #1a2305;"></div>
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Points: <span class="txtLocalWrongAnswerMultiplication"></span></div>
+								
+								
+								
+							</div><!--multiplication END-->
+							<!--Division START-->
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background:#39550c;padding:.5em">
+								
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background:#e38c12;min-height:1em;border:thin solid #f6a531">Division</div>
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="border-top:thin solid #1a2305;"></div>
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Points: <span class="txtLocalWrongAnswerDivision"></span></div>
+								
+								
+								
+							</div><!--Division END-->
+							
+							
+						</div>
+						
+					</div>
+				</div>
+			</div>
+	</div><!--main cointainer END -->
+
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jq-custom-animations.js"></script>
+	<script src="js/jquery.transit.js"></script>
+	<script src="js/Chart.js"></script>
+	<script src="js/analytics.js"></script>
+
+	</body>
+	
+	
+	
+</html>

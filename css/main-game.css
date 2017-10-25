@@ -1,0 +1,296 @@
+body {
+    opacity: 1;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
+html,
+body,
+#wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+html,
+body {
+    background-position: fixed;
+    overflow: hidden;
+}
+#main-char {
+    width: 15%;
+    height: 100%;
+    background: red;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    background: url("../img/png/main-char-male.png");
+    background-size: 60%;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    z-index: 10000;
+}
+#main-platform {
+    background: #dedede;
+    height: 60%;
+    width: 100%;
+    position: relative;
+    background: url("../img/png/mountain-bg.png");
+    background-size: 100% 100%;
+    background-position: fixed;
+    background-repeat: no-repeat;
+    z-index: 9000;
+    overflow: hidden;
+    height: 40%;
+    display: block;
+}
+#main-question {
+    background: #999999;
+    height: 60%;
+    width: 100%;
+    position: relative;
+    background: url("../img/png/platform.png");
+    background-repeat: no-repeat;
+    background-size: 40% 100%;
+    background-repeat: repeat-x;
+    height: 60%;
+    z-index: 9000;
+}
+.enemy-box {} .enemy-sample {
+    width: 5em;
+    width: 15%;
+    height: 100%;
+    background: blue;
+    position: absolute;
+    bottom: 0;
+    right: -5%;
+    background: url("../img/png/enemy-images/0.png");
+    background: none;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    z-index: 10000;
+}
+#question,
+.btn-choice {
+    font-size: 2em;
+}
+.enemy-size {
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+.enemy-lightning {
+    background-color: rgba(196, 231, 255, .5);
+    background: none;
+    position: absolute;
+    bottom: 0;
+    background: url("../img/png/score-star.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-color: none;
+    z-index: 99999;
+}
+.progressBarDivContainer {
+    border: solid .5em #2c4555;
+    border-radius: 5px 5px 5px 5px;
+    border-radius: .3em .3em .3em .3em;
+    box-shadow: 12px 12px 10px rgba(0, 0, 0, 0.2);
+    background-color: #2d4900;
+    overflow: visible;
+    padding: 0;
+    margin-top: 2em;
+    height: 3em;
+}
+.progressBarDiv {
+    position: relative;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: #60c225;
+    overflow: visible;
+}
+.playerHead {}.playerHeadContainer {
+    position: absolute;
+    width: 2.1em;
+    height: 2.1em;
+    overflow: visible;
+    right: 0;
+}
+.progressBarMedal {
+    position: absolute;
+    width: 5;
+    height: 600%;
+    overflow: visible;
+    right: -6.5em;
+    top: -4em;
+}
+.progressBarMedalContainer {
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: visible;
+}
+.specialModalContainer {
+    background: rgba(0, 0, 0, 0.5);
+}
+.modal-dialog {
+    border: #2b3b08 solid 5px;
+    background: #7aaf21;
+    color: #fff;
+    text-shadow: 0px 3px 1px rgba(26, 35, 5, .8);
+    text-stroke: 3px solid #ffffff;
+}
+.modal-header {
+    border: 0;
+    background: #7aaf21;
+}
+.modal-body {
+    background: #7aaf21;
+}
+.modal-footer {
+    background: #7aaf21;
+    border: 0;
+}
+.mainQuestionContainer .btn {
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 1px 3px 1px rgba(26, 35, 5, 1);
+    font-family: Calibri;
+}
+.mainQuestionContainer {
+    bottom: -10em;
+    position: absolute;
+}
+.btn-default:focus {
+    background: #60C225;
+}
+.praisePlayerDiv {
+    position: absolute;
+    text-align: center;
+    min-width: 12em;
+    min-height: 2em;
+    background: none;
+    background: rgba(242, 249, 41, 1);
+    background: #c1b939;
+    top: 0;
+    right: -10em;
+    color: #fff;
+    text-shadow: 1px 3px 1px rgba(26, 35, 5, 1);
+    border-radius: 2px 2px 2px 2xp;
+    padding-right: 1em;
+    padding-left: 1em;
+    opacity: 0;
+    border-radius: .5em;
+}
+.paddingThin {
+    padding: .5em
+}
+.imgEnemyInside {
+    width: 75%;
+    position: absolute;
+    bottom: 0;
+}
+.imgCorrectWrongContainer {
+    position: absolute;
+    bottom: -3.5em;
+    background: none;
+    width: 5em;
+    height: 3em;
+    text-align: center;
+}
+.imageOnRight,
+.imageOnLeft {
+    background: rgba(255, 255, 255, .2);
+    border: thin solid rgba(255, 255, 255, .5);
+    border-radius: .5em;
+    padding-top: .5em;
+    margin-bottom: .5em;
+}
+.imageOnRight img,
+.imageOnLeft img {
+    margin-bottom: 1em;
+}
+.imageOnRight img:hover,
+.imageOnLeft img:hover {
+    background: rgba(0, 0, 0, .65);
+}
+.attack {
+    -webkit-animation: myfirst .5s;
+    animation: myfirst .5s;
+}
+@keyframes myfirst {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 25px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+@-webkit-keyframes myfirst {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 25px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+.forwardEnemyCss {
+    -webkit-animation: forwardE 60s;
+    animation: forwardE 60s;
+}
+.pauseAnimate {
+    -webkit-animation-play-state: paused;
+    /* Chrome, Safari, Opera */
+    
+    animation-play-state: paused;
+}
+.resumeAnimate {
+    -webkit-animation-play-state: running;
+    /* Chrome, Safari, Opera */
+    
+    animation-play-state: running;
+}
+@keyframes forwardE {
+    0% {
+        opacity: 0;
+        left: 90%;
+    }
+    5% {
+        opacity: 1;
+    }
+    100% {
+        left: 0;
+    }
+}
+@-webkit-keyframes forwardE {
+    0% {
+        opacity: 0;
+        left: 90%;
+    }
+    5% {
+        opacity: 1;
+    }
+    100% {
+        left: 0;
+    }
+}
+.selectedLevelTxt {
+    font-size: 1.3em;
+    color: #252525;
+    text-shadow: 1px 1px 5px rgba(250, 250, 250, .5);
+}
+.charMentorContainer,
+.praisePlayerDiv {
+    opacity: 1;
+    display: none;
+}

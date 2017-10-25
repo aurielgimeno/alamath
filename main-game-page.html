@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Alamath - Arithmetic Game</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/style-custom.css">
+	<link rel="stylesheet" href="css/animation-custom.css">
+	<link rel="stylesheet" href="css/main-game.css">
+	
+</head>
+	
+
+<body class="" style="position:relative">
+<!-- AUDIO =================================================================================================================================================================================================== -->
+	<audio controls autoplay loop  style="display:none;" ><source src="audio/2.mp3" type="audio/mp3"></audio>	
+<!-- END AUDIO =================================================================================================================================================================================================== -->
+	
+	<div class="leftWindow"></div>
+	<div class="rightWindow"></div>
+	
+	
+	
+     <div id="wrapper" style="">
+	 
+	<!-- mentor IGAN the Eagle START -->
+	<div style="position:absolute;background:none;bottom:0;left:0;z-index:99999;" class="col-lg-2 col-md-3 col-sm-3 col-xs-3 ">
+		<img src="img/png/char-mentor.png" alt="" class="imgCharMentor img-thumbnail noBG col-lg-12" style="border:0;position:relative;bottom:0;"  />
+		<div class="praisePlayerDiv">
+			<div class="txtPraisePlayer">Good Job!</div>
+			<img src="img/png/pointer-test.png" alt=""  style="position:absolute;bottom:-5px;left:-5px;width:15%" />
+			
+			<div class="imgCorrectWrongContainer">
+				<img class="imgCorrectWrong img-thumbnail noBG borderless" src="img/png/correct.png" alt="" />
+			</div>
+		</div>
+	</div><!-- mentor IGAN the Eagle END -->
+	
+		<div id="main-platform" style="">
+			<img src="img/png/castle/castle-addition.png" class="selectedCastle img-thumbnail noBG borderless" width="25%" alt="" style="position:absolute;bottom:0;left:-1em;"/>
+			
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"  style="position:fixed:left:2em;top:2em;">
+					
+					<img src="img/png/castle/txt-addition.png" class="selectedCastleTxt img-thumbnail noBG borderless col-lg-8 col-md-8 col-sm-10 col-xs-10" alt="" />
+					<span class="selectedLevelTxt col-xs-12">Easy</span>
+				</div>
+				
+				<div style="" class="progressBarDivContainer row col-lg-4 col-md-4 col-sm-4 col-xs-4">
+					<div style="" class="progressBarDiv" > 
+						<div class="playerHead"><img src="img/png/player-head-m.png"  alt=""class="playerHeadContainer" /></div>
+					</div>
+					<div class="progressBarMedalContainer">
+						<div><img src="img/png/progress-medal.png"  alt="" class="progressBarMedal" height=".5%" /></div>
+					</div>
+				</div>
+
+				
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 btnAnimate" style="position:absolute:top:10px;right:10px;">
+					<img  src="img/png/btn-pause.png" class="btn-pause img-thumbnail noBG borderless col-lg-6 col-md-6 col-sm-6 col-xs-10" alt="" style="position:fixed;top:0;right:0;width:8em;z-index:999999" />
+				</div>
+			</div>
+			
+			<div id="main-char"></div>
+			<div id="enemyRespawn"></div>
+		</div>
+        
+		
+		<div id="main-question" >
+			<div class="mainQuestionContainer col-lg-10 col-md-12 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-0 col-sm-offset-0 col-xs-offset-0" >
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+					<div class="imageOnLeft col-lg-5 col-md-5 col-sm-5 col-xs-5" ></div>
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+						<img  src="img/png/operators/operation-plus.png" class="operatorToUse paddingThin img-thumbnail noBG borderless col-lg-8 col-md-8 col-sm-8 col-xs-8 col-lg-offset-1 col-md-offset-1 col-sm-offset-2 col-xs-offset-2" alt="" />	
+					</div>
+					<div class="imageOnRight col-lg-5 col-md-5 col-sm-5 col-xs-5"></div>
+				
+					<div class=" col-lg-8 col-md-8 col-sm-8 col-xs-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2 ">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<input  id="question" type="button" value="Test" class="btn btn-primary  col-lg-12 col-md-12 col-sm-12 col-xs-12" disabled/>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<input id="choice1" type="button" value="Test" class="btn-choice btn btn-default col-lg-12 col-md-12 col-sm-12 col-xs-12" />
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<input id="choice2" type="button" value="Test" class="btn-choice btn btn-default col-lg-12 col-md-12 col-sm-12 col-xs-12" />
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+							<input id="choice3" type="button" value="Test" class="btn-choice btn btn-default col-lg-12 col-md-12 col-sm-12 col-xs-12" />
+						</div>
+						<input type="text" name="" id="correct" style="display:none" />
+					</div>
+				</div>
+			</div>
+		</div>
+    </div><!-- /#wrapper -->
+   
+	
+	<!-- ======= gameOverAllModal START ====== -->
+	<div id="gameOverAllModal" class="modal fade specialModalContainer" style="z-index:999999" data-backdrop="static">
+		<div class="modal-dialog" >
+			<div class="modal-content" >
+				<div class="modal-header">
+					<center><h1 class="modal-title endModalTitle">Game Over</h1></center>
+				</div>
+				<div class="modal-body">
+					<center>
+						<h3><span class="txtPointsRank"></span></h3>
+						<h3> <span class="txtLocalUsername"></span></h3>
+						<h3>Your Score: <span class="txtCorrectAnswerPoints"></span></h3>
+						<h3>You gained <span class="txtNoOfStars"></span>!</h3>
+						
+						<div class="scoreStarContainer row col-lg-6 col-md-6 col-sm-6 col-xs-6 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-3">	
+						</div>
+					<center>
+				</div>
+				<div class="modal-footer">
+					<a href="main-game-page.html"><button type="button" class="btn btn-default col-lg-12 col-md-12 col-sm-12 col-xs-12">Play Again</button></a>
+					<a href="index.html"><button type="button" class="btn btn-default col-lg-12 col-md-12 col-sm-12 col-xs-12">Main Menu</button></a>
+				</div>
+			</div>
+		</div>	
+		</div>
+		</div>
+	</div><!-- ======= gameOverAllModal END ====== -->
+	
+	
+	
+	<!-- ======= pauseModal START ====== -->
+	<div id="pauseModal" class="modal fade specialModalContainer" style="z-index:999999;" data-backdrop="static">
+	
+		<div class="modal-dialog" style="margin-top:10" >
+			<div class="modal-content" >
+				<div class="modal-header">
+					<center><h1 class="modal-title endModalTitle">Game Paused</h1></center>
+					</div>
+				<div class="modal-body">
+					<button type="button" class="btn-resume btn btn-default col-lg-12 col-md-12 col-sm-12 col-xs-12">Resume</button>
+					<a href="main-game-page.html"><button type="button" class="btn btn-default col-lg-12 col-md-12 col-sm-12 col-xs-12">Play Again</button></a>
+					<a href="index.html"><button type="button" class="btn btn-default col-lg-12 col-md-12 col-sm-12 col-xs-12">Main Menu</button></a>
+				
+					
+				</div>
+				<div class="modal-footer">
+					</div>
+			</div>
+		</div>
+	</div><!-- ======= /pauseModal END ====== -->
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/quizzes/quizArray-addition.js"></script>
+	<script src="js/quizzes/quizArray-subtraction.js"></script>
+	<script src="js/quizzes/quizArray-multiplication.js"></script>
+	<script src="js/quizzes/quizArray-division.js"></script>
+	<script src="js/jq-custom.js"></script>
+	<script src="js/jq-custom-animations.js"></script>
+	<script src="js/jquery.transit.js"></script>
+	<script src="js/velocity.js"></script>
+	<script src="js/velocity.ui.min.js"></script>
+	<script src="js/main-game.js"></script>
+
+</body>
+
+</html>

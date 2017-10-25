@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Alamath - Arithmetic Game</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/style-custom.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!-- AUDIO =================================================================================================================================================================================================== -->
+	<audio controls loop autoplay	style="display:none;" ><source src="audio/1.mp3" type="audio/mp3"></audio>	
+<!-- END AUDIO =================================================================================================================================================================================================== -->
+
+	<!-- splash screen START -->
+	<div class="splashKo" style="">	
+		<div class="row splashImages" style="display:none;">
+			<img src="img/pmaw_logo.png" alt=""  class="img-thumbnail splashImages1" style="margin:0 auto;display:block;background:none;border:0px;"/>
+			<img src="img/pmaw_txt.png" alt=""  class="img-thumbnail splashImages2" style="margin:0 auto;display:block;background:none;border:0px;"/>
+		</div>
+	</div><!-- splash screen END -->
+	
+	<img src="img/png/clouds/Cloud-1.png" alt="" class="cloud cloud-1 cloudToLeft"/>
+	<img src="img/png/clouds/Cloud-2.png" alt="" class="cloud cloud-2 cloudToLeft"/>
+	<img src="img/png/clouds/Cloud-3.png" alt="" class="cloud cloud-3 cloudToLeft"/>
+	<img src="img/png/clouds/Cloud-5.png" alt="" class="cloud cloud-1 cloudToRight"/>
+	<img src="img/png/clouds/Cloud-6.png" alt="" class="cloud cloud-2 cloudToRight"/>
+	<img src="img/png/clouds/Cloud-7.png" alt="" class="cloud cloud-3 cloudToRight"/>
+     
+	<div id="wrapper" >
+		<!-- main-menu-wrapper START-->
+		<div id="main-menu-wrapper" style="margin-top:6%;">
+			
+			<!-- title image START -->
+    		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+				<img style="" class="img-thumbnail noBG borderless col-lg-6 col-xs-8 col-lg-offset-3 col-xs-offset-2" src="img/png/alamath-title-green.png" alt="" /> 
+			</div><!-- title image END -->
+			
+			
+			<!-- play image START -->
+			<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1 noPadding btnAnimate ">
+				<img id="btn-game-start" class="img-thumbnail noBG borderless col-lg-2 col-md-2 col-sm-2 col-xs-2 col-lg-offset-5 col-md-offset-5 col-sm-offset-5 col-xs-offset-5" src="img/png/btn-play-circle.png" alt="" />
+			</div><!-- play image END -->
+			
+			
+			<div class="col-lg-4 col-md-6 col-sm-6 col-xs-8 col-lg-offset-4 col-md-offset-3 col-sm-offset-3 col-xs-offset-2">
+				<!-- analytics image START -->
+				<div class="col-xs-4 noPadding btnAnimate">
+					<img  class="btn-to-analytics img-thumbnail noBG borderless col-lg-12 col-md-12 col-sm-12 col-xs-12" src="img/png/btn-analytics.png" alt="" /> 
+				</div><!-- analytics image END -->
+				
+				
+				<!-- my room image START -->
+				<div class="col-xs-4 noPadding btnAnimate">
+					<img  class="btn-to-myroom img-thumbnail noBG borderless  col-lg-12 col-md-12 col-sm-12 col-xs-12" src="img/png/btn-my-room.png" alt="" /> 
+				</div><!-- my room image END -->
+				
+				
+				<!-- option image START -->
+				<div class="col-xs-4 noPadding btnAnimate"  >
+					<img  class="btn-to-option img-thumbnail noBG borderless  col-lg-12 col-md-12 col-sm-12 col-xs-12" src="img/png/btn-options.png" alt="" /> 
+				</div><!-- option image END -->
+				
+				
+				
+			</div>
+        </div><!-- main-menu-wrapper END-->
+    </div> <!-- /#wrapper -->
+ 
+	
+	<!--login MODAL START -->
+	<div id="localLoginModal" class="modal fade"  data-backdrop="static" >
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header" >
+					<img src="img/png/btn-x.png" alt="" class="btn_close" data-dismiss="modal" />
+					<center><h4 class="modal-title">Welcome to the World of ALAMATH</h4></center>
+				</div>
+				<div class="modal-body">
+					<center>
+					<!--charSelectContainer START -->
+					<div class="charSelectContainer row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h4>Select Your Character</h4>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-3" >
+							<img id="maleChar" src="img/png/main-char-male.png" alt="" class="selectedChar charSelectOptionImg col-lg-6 col-md-6 col-sm-6 col-xs-6" />
+							<img id="femaleChar" src="img/png/main-char-female.png" alt="" class="charSelectOptionImg col-lg-6 col-md-6 col-sm-6 col-xs-6" />
+						</div>
+					</div><!--charSelectContainer END -->
+					
+					<div class="welcomeDiv" style="display:none;">
+						<h3 class="txtWelcomeUsername"></h3>
+						<a href="main-map.html"><button type="button" class="btn btn-default  form-control" data-dismiss="modal" >Continue</button></a>
+					</div>
+					</center>
+					<div class="loginModalForm">
+						<center>
+							<h4>What is your Name?</h4>
+							<input type="text" name="" id="inputLocalUsername" class=" form-control" placeholder="Type here your name, or your nickname." style="margin-bottom:1em" required />
+							<p class="txtLoginLocalErrorMsg"></p>
+						</center>
+						
+						
+							<button type="button" class="btn btn-default  form-control btnLoginLocalStorage" >Continue</button>
+							<!--
+							<button type="button" class="btn btn-default  form-control " data-dismiss="modal">Close</button>
+							-->
+					</div>
+				</div><!-- /modal-body -->
+				<div class="modal-footer">
+					
+				</div>
+			</div>
+		</div>
+	</div><!--login MODAL END -->
+	
+	<!--login edit MODAL START -->
+	<div id="localLoginEditModal" class="modal fade"  data-backdrop="static">
+		<div class="modal-dialog">
+			<div class="modal-content">
+			
+				<div class="modal-header" >
+					<img src="img/png/btn-x.png" alt="" class="btn_close" data-dismiss="modal" />
+					<center><h4 class="modal-title">Welcome to the World of ALAMATH</h4></center>
+				</div>
+				<div class="modal-body">
+					
+					<center>
+						<!--charSelectContainer START -->
+					<div class="charSelectContainer row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h4>Select Your Character</h4>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-3">
+							<img id="maleCharEdit" src="img/png/main-char-male.png" alt="" class="selectedChar charSelectOptionImg ol-lg-6 col-md-6 col-sm-6 col-xs-6" />
+							<img id="femaleCharEdit" src="img/png/main-char-female.png" alt="" class="charSelectOptionImg ol-lg-6 col-md-6 col-sm-6 col-xs-6" />
+						</div>
+						
+						
+					</div><!--charSelectContainer END -->
+						<h3 class="">Hi <span class="txtHiUsername"></span></h3>
+						<div class="editUsernameDiv" style="display:none">
+							<input type="text" name="" id="inputEditLocalUsername" class=" form-control" placeholder="Type your new Name or Nickname here." style="margin-bottom:1em" required />
+							<p class="txtLoginLocalErrorMsg"></p>
+							<button type="button" class="btn btn-default  form-control btnSaveChangesLocalUsername" >Save Changes</button>
+						</div>
+					
+						<button type="button" class="btn btn-default  form-control btnChangeYourName" >Change Your Name?</button>
+						<!--
+						<button type="button" class="btn btn-default  form-control " data-dismiss="modal">Close</button>
+						-->
+					</center>
+				</div>
+				<div class="modal-footer">
+					
+				</div>
+			</div>
+		</div>
+	</div><!--login edit MODAL END -->
+	
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/quizArray.js"></script>
+	<script src="js/jq-custom.js"></script>
+	<script src="js/jq-custom-animations.js"></script>
+	<script src="js/jquery.transit.js"></script>
+	
+	<script type="text/javascript" src="js/velocity.js"></script>
+	<script type="text/javascript" src="js/velocity.ui.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	
+	
+	
+</body>
+	
+</html>

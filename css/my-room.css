@@ -1,0 +1,72 @@
+html {
+    background: none;
+}
+body {
+    opacity: 0;
+}
+.mainCointainer {
+    margin-top: 3%;
+    border: #2b3b08 solid 5px;
+    background: #7aaf21;
+    color: #fff;
+    text-shadow: 0px 1px 0px rgba(26, 35, 5, .8);
+}
+body {
+    background: url("../img/png/Cloud-Background-darkbg.png") no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.nav,
+tab-content {} .mainCointainer a {
+    color: #fff;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    background: #39550c;
+    color: #fff;
+    border: 0;
+}
+a:focus {
+    outline: thin dotted;
+    outline-offset: -2px;
+}
+a:hover {
+    color: #353732;
+}
+#myTab1 {
+    margin: 1em;
+}
+#progressTab {} .nav-tabs a {
+    background: #557f12;
+}
+.nav {
+    border: 0;
+}
+#myTabContent1 {
+    background: red;
+}
+.borderless {
+    border: 0;
+}
+.noBg {
+    background: none;
+}
+.inlineBlock {
+    display: inline-block;
+}
+th,
+td {
+    text-align: center;
+}
+h3 {
+    font-size: .9em;
+}
+h1,
+h2,
+h3,
+h4 {
+    line-height: 0;
+}

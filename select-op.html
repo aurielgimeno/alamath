@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Alamath - Arithmetic Game</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/style-custom.css">
+	<link rel="stylesheet" href="css/select-op.css">
+	
+
+</head>
+
+<body class="txtAlignCenter">
+<!-- AUDIO =================================================================================================================================================================================================== -->
+<audio controls autoplay loop  style="display:none;" ><source src="audio/1.mp3" type="audio/mp3"></audio>	
+<!-- END AUDIO =================================================================================================================================================================================================== -->
+	<div class="opContainer">
+		<img src="img/png/btn-to-left.png" alt="" style="" class="btn btn-back img-responsive btn-back-to-main-menu " />
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<img src="img/png/levels/select-kingdom.png" alt="" class="img-thumbnail noBG borderless col-lg-2 col-md-2 col-sm-2 col-xs-2 col-lg-offset-5 col-md-offset-5 col-sm-offset-5 col-xs-offset-5" />
+		</div>
+		
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 op op1 level-item" id="Addition" >
+			<img src="img/png/level-addition.png" alt="" class="img-thumbnail col-xs-12" />
+			<p>Protect the Kingdom of Addition from the invaders</p>
+			<img src="img/png/enemy-images/0.png" alt="" class="img-thumbnail  col-xs-12 col-md-10 col-md-offset-1"/>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 op op2 level-item" id="Subtraction">
+			<img src="img/png/level-subtraction.png" alt=""  class="img-thumbnail col-xs-12"/>
+			<p>Protect the Kingdom of Subtraction from the invaders</p>
+			<img src="img/png/enemy-images/1.png" alt="" class="img-thumbnail  col-xs-12 col-md-10 col-md-offset-1"/>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 op op3 level-item" id="Multiplication">
+			<img src="img/png/level-multiplication.png" alt="" class="img-thumbnail col-xs-12"/>
+			<p>Protect the Kingdom of Multiplication from the invaders</p>
+			<img src="img/png/enemy-images/2.png" alt="" class="img-thumbnail col-xs-12 col-md-10 col-md-offset-1"/>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 op level-item" id="Division">
+			<img src="img/png/level-division.png" alt="" class="img-thumbnail col-xs-12"/>
+			<p>Protect the Kingdom of Division from the invaders</p>
+			<img src="img/png/enemy-images/3.png" alt="" class="img-thumbnail col-xs-12 col-md-10 col-md-offset-1"/>
+		</div>
+	</div>
+	
+	<div class="levelsContainer" >
+		<img src="img/png/btn-to-left.png" alt="" style="" class="btn btn-back img-responsive btnBackToOperators" />
+	
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<img src="img/png/levels/ADDITION.png" alt="" class="selectedOpTxt img-thumbnail noBG borderless col-lg-2 col-md-2 col-sm-2 col-xs-2 col-lg-offset-5 col-md-offset-5 col-sm-offset-5 col-xs-offset-5" />
+		</div>
+		<span>(Select Difficulty)</span><br />
+		<div class="levels level0" id="0">
+			<img src="img/png/levels/EASY.png" alt="" class="img-thumbnail noBG borderless" />
+			<p>Play with small range of numbers</p>
+		</div>
+		<div class="levels level1" id="1">
+			<img src="img/png/levels/AVERAGE.png" alt="" class="img-thumbnail noBG borderless" />
+			<p>Play with medium range of numbers</p>
+		</div>
+		<div class="levels level2" id="2">
+			<img src="img/png/levels/DIFFICULT.png" alt="" class="img-thumbnail noBG borderless" />
+			<p>Play with large range of numbers</p>
+		</div>
+		
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 instructionContainer"  >
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align:left;padding:.5em;">
+				Instruction: <br />
+				<p style="">Find the <span class="instructionTxt">sum</span> and complete the number sentence.</p>
+				
+			</div>
+			<img src="img/png/instructions/instruction-addition.png" alt="" class="img-thumbnail noBG borderless col-lg-8 col-md-8 col-sm-8 col-xs-8 instructionImg"/>
+			
+		</div>
+		
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/quizArray.js"></script>
+	<script src="js/jq-custom.js"></script>
+	<script src="js/jq-custom-animations.js"></script>
+	<script src="js/jquery.transit.js"></script>
+	
+	<script type="text/javascript" src="js/velocity.js"></script>
+	<script type="text/javascript" src="js/velocity.ui.min.js"></script>
+	<script type="text/javascript" src="js/select-op.js"></script>
+	
+	
+</body>
+
+</html>

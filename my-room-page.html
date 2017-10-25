@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>Alamath - Arithmetic Game</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/style-custom.css">
+	<link rel="stylesheet" href="css/my-room.css">
+	</head>
+	<body>
+	<!-- AUDIO =================================================================================================================================================================================================== 	-->
+		<audio controls autoplay loop  style="display:none;" ><source src="audio/1.mp3" type="audio/mp3"></audio>
+	<!-- END AUDIO =================================================================================================================================================================================================== -->
+		
+	<!--main cointainer START -->
+	<div class="mainCointainer col-lg-10 col-md-10 col-sm-10 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+		<img src="img/png/btn-x.png" alt="" class="btn_close btn-back-to-main-menu" />
+		<center><h2 class="title">My Room</h2></center>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background:none;padding:2em">
+			<div  style="background:#557f12;text-align:center;" class="boderRadius">
+			<img src="img/png/main-char-male.png" alt="" class="img-thumbnail noBg borderless col-lg-12 mainCharImg "/>
+			<h2><span class="txtLocalUsername"></span></h2>
+			</div>
+		</div>
+			
+		<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 " style="padding:2em;">
+			<div class="table-responsive col-lg-12 col-md-12 col-sm-12 col-xs-12 boderRadius"  style="background:#39550c;">
+						<table class="table" >
+							<thead>
+								<tr>
+									<th><h4>My Stars:</h4></th>
+									<th><h4>Number of Stars</h4></th>
+								   
+								</tr>
+							</thead>
+							<tbody>
+								<tr >
+									<td><h3 class="inlineBlock">Addition</h3><img src="img/png/score-star.png" alt="" class="img-thumbnail noBg borderless col-lg-2 col-md-2 col-sm-4 col-xs-4"/> </td>
+									<td><h3><span class="txtLocalStarsAddition">0</span></h3></td>
+									
+								</tr>
+								<tr>
+									<td><h3 class="inlineBlock">Substraction</h3><img src="img/png/score-star.png" alt="" class="img-thumbnail noBg borderless col-lg-2 col-md-2 col-sm-4 col-xs-4"/> </td>
+									<td><h3><span class="txtLocalStarsSubtraction">0</span></h3></td>
+									
+								</tr>
+								<tr>
+									 <td><h3 class="inlineBlock">Multiplication</h3><img src="img/png/score-star.png" alt="" class="img-thumbnail noBg borderless col-lg-2 col-md-2 col-sm-4 col-xs-4"/> </td>
+									<td><h3><span class="txtLocalStarsMultiplication">0</span></h3></td>
+									
+								</tr>
+								<tr>
+									 <td><h3 class="inlineBlock">Division</h3><img src="img/png/score-star.png" alt="" class="img-thumbnail noBg borderless col-lg-2 col-md-2 col-sm-4 col-xs-4"/> </td>
+									<td><h3><span class="txtLocalStarsDivision">0</span></h3></td>
+								   
+								</tr>
+								<tr>
+									 <td><h4>Total Stars:</h4></td>
+									<td><h4><span class="txtlocalTotalStars">0</span></h4></td>
+								   
+								</tr>
+							   
+							</tbody>
+						</table>
+					</div>	
+		</div>
+	</div><!--main cointainer END -->
+
+
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jq-custom-animations.js"></script>
+	<script src="js/jq-custom.js"></script>
+	<script src="js/jquery.transit.js"></script>
+	<script src="js/Chart.js"></script>
+	<script src="js/my-room.js"></script>
+	</body>
+</html>
